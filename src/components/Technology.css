@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.technology {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    margin-top: -32px;
+}
+
+.technology__title {
+    color: #3E4095;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.technology__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 2rem;
+}
+
+.technology__image {
+    width: 45%;
+    height: auto;
+    animation: fadeInLeft 1s ease-in-out 0.5s backwards;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+.technology__description {
+    width: 50%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    animation: fadeInUp 1s ease-in-out 1s backwards;
+}
+
+.technology__description h2 {
+    font-size: 1.5rem;
+    color: #3E4095;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.technology__description h3 {
+    font-size: 1.3rem;
+    color: #3E4095;
+    margin: 1rem 0;
+    font-weight: 400;
+}
+
+.technology__description ul {
+    padding-left: 1rem;
+    color: #3E4095;
+}
+
+.technology__description ul li {
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.technology__newImage {
+    width: auto; /* A largura será ajustada automaticamente para manter a proporção da imagem */
+    height: 500px; /* Define a altura da imagem como 500px */
+    background-size: contain; /* A imagem será redimensionada para se ajustar dentro do elemento, mantendo sua proporção */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+@media (max-width: 768px) {
+    .technology__content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .technology__image {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .technology__description {
+        width: calc(100% - 4px);
+        margin: 0 2px 2rem;
+    }
+}
